@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merge Two Arrays using While loop</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #001219;
+      }
+    </style>
+    <script>
+      let data1 = [12, 19, 25, 65, 83, 97, 115, 354];
+      let data2 = [28, 35, 39, 46, 62, 67];
+      let data3 = [];
+      let i = 0;
+      let j = 0;
+      let k = 0;
+
+      while (i < data1.length && j < data2.length) {
+        if (data1[i] < data2[j]) {
+          data3[k] = data1[i];
+          i++;
+        } else {
+          data3[k] = data2[j];
+          j++;
+        }
+        k++;
+      }
+      //   console.warn(i);
+      //   console.warn(j);
+
+      while (i < data1.length) {
+        data3[k] = data1[i];
+        i++;
+        k++;
+      }
+      //   console.warn(i);
+      console.warn(data3);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Element in Array</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        background-color: #0d1b2a;
+      }
+      input {
+        background-color: transparent;
+        border: 1px solid darkgrey;
+        padding: 12px 12px;
+        margin-bottom: 20px;
+        color: white;
+        border-radius: 6px;
+        font-size: 17px;
+      }
+      input:focus {
+        outline: none;
+      }
+      button {
+        padding: 8px 16px;
+        cursor: pointer;
+        background-color: lightskyblue;
+        border: none;
+        font-weight: 600;
+        font-size: 16px;
+        border-radius: 6px;
+        color: #121212;
+      }
+    </style>
+    <script>
+      //   let data = [10, 25, 36, 45, 85, 49, 57, 68, 29, 83, 99];
+      //   let searchItem = 49;
+      //   let index = undefined;
+      //   for (let i = 0; i < data.length - 1; i++) {
+      //     if (data[i] === searchItem) {
+      //       index = i;
+      //       break;
+      //     }
+      //   }
+      //   console.warn(index);
+      //   console.warn(data.indexOf(searchItem));
+
+      //   data.splice(2, 1);
+      //   console.warn(data);
+
+      function searchElement() {
+        let data = [10, 25, 36, 45, 85, 49, 57, 68, 29, 83, 99];
+        let searchItem = document.getElementById("searchItem").value;
+        let index = undefined;
+
+        for (let i = 0; i <= data.length - 1; i++) {
+          if (data[i] === parseInt(searchItem)) {
+            index = i;
+            break;
+          }
+        }
+        console.warn(index);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="searchItem" placeholder="Enter Search Element" />
+    <button onclick="searchElement()">Search Element</button>
+  </body>
+</html>

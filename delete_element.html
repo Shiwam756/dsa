@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Element in Array</title>
+    <script>
+      //   let data = [25, 65, 57, 47, 12, 36, 69, 80, 87];
+      //   let position = 4;
+      //   for (let i = position; i < data.length; i++) {
+      //     data[i] = data[i + 1];
+      //   }
+      //   data.length = data.length - 1;
+      //   console.warn(data);
+
+      // Inbuild method
+      // data.splice(2,1)
+      // console.warn(data)
+
+      function deleteElement() {
+        let data = [25, 65, 57, 47, 12, 36, 69, 80, 87];
+        let position = document.getElementById("position").value;
+        position = parseInt(position);
+        for (let i = position; i < data.length - 1; i++) {
+          data[i] = data[i + 1];
+        }
+        data.length = data.length - 1;
+        console.warn(data);
+      }
+    </script>
+    <style>
+      body {
+        background-color: #14213d;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .flex {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      input {
+        padding: 9px 8px;
+        border-radius: 4px;
+        border: none;
+        background: #e5e5e5;
+        font-size: 18px;
+        font-weight: 600;
+        color: #14213d;
+      }
+      input::placeholder {
+        font-size: 16px;
+        font-weight: 500;
+      }
+      input:focus {
+        outline: none;
+        border: none;
+      }
+      button {
+        border: none;
+        outline: none;
+
+        background-color: #84a59d;
+        padding: 9px 12px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        color: #edf2f4;
+        transition: all 0.1s ease-in-out;
+      }
+      button:hover {
+        border: 2px solid #84a59d;
+        background-color: #edf2f4;
+        color: #84a59d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <div>
+        <input type="text" placeholder="Enter Position" id="position" />
+        <button onclick="deleteElement()">Remove Element</button>
+      </div>
+    </div>
+  </body>
+</html>

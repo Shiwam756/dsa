@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Element in Array</title>
+    <script>
+      // getting Index
+      //   let data = [89, 58, 46, 21, 36, 20, 97, 59, 5, 11, 93];
+      //   let element = 20;
+      //   let index = undefined;
+      //   for (let i = 0; i <= data.length - 1; i++) {
+      //     // console.warn(data[i]);
+      //     if (data[i] === parseInt(element)) {
+      //       index = i;
+      //       break;
+      //     }
+      //   }
+      //   console.warn(index);
+
+      // Inbuild Method
+      //   console.warn(data.indexOf(element));
+
+      //   getting value
+      //   let data = [89, 58, 46, 21, 36, 20, 97, 59, 5, 11, 93];
+      //   let index = 4;
+      //   let value = undefined;
+      //   for (let i = 0; i <= data.length - 1; i++) {
+      //     if (i === parseInt(index)) {
+      //       value = data[i];
+      //       break;
+      //     }
+      //   }
+      //   console.warn(value);
+
+      function searchElement() {
+        let data = [89, 58, 46, 21, 36, 20, 97, 59, 5, 11, 93];
+        let element = document.getElementById("element").value;
+        let index = undefined;
+        for (let i = 0; i <= data.length - 1; i++) {
+          if (data[i] === parseInt(element)) {
+            index = i;
+            break;
+          }
+        }
+        console.warn(index);
+      }
+    </script>
+    <style>
+      body {
+        background-color: #14213d;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .flex {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      input {
+        padding: 9px 8px;
+        border-radius: 4px;
+        border: none;
+        background: #e5e5e5;
+        font-size: 18px;
+        font-weight: 600;
+        color: #14213d;
+      }
+      input::placeholder {
+        font-size: 16px;
+        font-weight: 500;
+      }
+      input:focus {
+        outline: none;
+        border: none;
+      }
+      button {
+        border: none;
+        outline: none;
+
+        background-color: #84a59d;
+        padding: 9px 12px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        color: #edf2f4;
+        transition: all 0.1s ease-in-out;
+      }
+      button:hover {
+        border: 2px solid #84a59d;
+        background-color: #edf2f4;
+        color: #84a59d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <div>
+        <input type="text" placeholder="Enter Element" id="element" />
+        <button onclick="searchElement()">Remove Element</button>
+      </div>
+    </div>
+  </body>
+</html>
