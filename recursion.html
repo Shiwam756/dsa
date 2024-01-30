@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursion</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body {
+        height: 100vh;
+        width: 100%;
+        background-color: darkslategray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+      }
+    </style>
+    <!-- <script>
+      function apple(x) {
+        console.warn(x);
+        if (x < 15) {
+          apple(x + 1);
+        }
+      }
+      let data = 0;
+      apple(data);
+    </script> -->
+
+    <script>
+      function factorial(x) {
+        if (x === 0) {
+          return 1;
+        }
+        return x * factorial(x - 1);
+      }
+      let data = 5;
+      console.warn(factorial(data));
+
+      //   function factorial(n) {
+      //     if (n === 0) {
+      //       return 1;
+      //     }
+      //     return n;
+      //   }
+      //   let data = 6;
+      //   console.warn(
+      //     6 *
+      //       factorial(6 - 1) *
+      //       factorial(5 - 1) *
+      //       factorial(4 - 1) *
+      //       factorial(3 - 1) *
+      //       factorial(2 - 1) *
+      //       factorial(1 - 1)
+      //   );
+    </script>
+
+    <!-- <script>
+      // while loop on array of strings
+      let superHeros = ["Ironman", "Superman", "Batman", "Spiderman", "Thor"];
+      let i = 0;
+      while (i < superHeros.length) {
+        console.warn(superHeros[i]);
+        i++;
+      }
+    </script> -->
+  </head>
+  <body>
+    <h2>Recursion</h2>
+  </body>
+</html>

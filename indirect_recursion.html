@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indirect Recursion</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body {
+        height: 100vh;
+        width: 100%;
+        background-color: darkslategray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+      }
+    </style>
+    <!-- <script>
+      let money = 100;
+      let totalApple = 0;
+
+      function buyApple(x) {
+        if (x > 0) {
+          console.warn("I have", x, "Rs and Total Apples", totalApple);
+          buyMore(x);
+        } else {
+          console.warn("I don't have more money but Total Apples", totalApple);
+        }
+      }
+
+      function buyMore(x) {
+        totalApple++;
+        buyApple(x - 10);
+      }
+      buyApple(money);
+    </script> -->
+    <script>
+      function test(x) {
+        // console.warn(x);
+        if (x > 0) {
+          test(x - 1);
+        }
+        console.warn(x);
+      }
+      let data = 5;
+      test(data);
+    </script>
+  </head>
+  <body>
+    <h1>Indirect Recursion</h1>
+  </body>
+</html>

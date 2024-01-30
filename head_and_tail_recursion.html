@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Head and Tail Recursion</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body {
+        height: 100vh;
+        width: 100%;
+        background-color: darkslategray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+      }
+    </style>
+    <script>
+      //   function colors() {
+      //     let fullName = "Shivam Singh";
+      //     console.warn(fullName);
+      //   }
+      //   function days() {
+      //     colors();
+      //   }
+      //   function fruits() {
+      //     days();
+      //   }
+      //   function topFunction() {
+      //     fruits();
+      //   }
+      //   topFunction();
+
+      function test(n) {
+        // console.warn(n);
+        if (n > 0) {
+          test(n - 1);
+        }
+        console.warn(n);
+      }
+      let data = 5;
+      test(data);
+    </script>
+  </head>
+  <body>
+    <h1>Head and Tail Recursion</h1>
+  </body>
+</html>
